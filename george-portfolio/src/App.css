@@ -1,0 +1,107 @@
+/* .App {
+  text-align: center;
+} */
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+/* 
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+} */
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Test grid */
+.container {
+  display: grid;
+  /* define column width, fr preference, over % and pixels, conflicts with margin and padding */
+
+  /* grid-template-columns: 1fr 2fr 1fr; */
+  /* short cut, same as above */
+  grid-template-columns: repeat(3, 2fr);
+  /* grid-auto-rows: 100px; */
+  grid-auto-rows: minmax(100px, auto);
+
+  /* column gap */
+  /* grid-column-gap: .3em;
+  /* row gap */
+  grid-row-gap: .3em;
+  /* or */
+  grid-gap: .5em;
+}
+.nested {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 40px;
+  grid-gap: .2em;
+}
+/* justify and aligning items */
+.container2 {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 1em;
+  /* default is stretch, start, center, end stretch */
+  justify-items: stretch;
+  align-items: stretch; 
+
+}
+
+.box1 {
+  /* align-self:start; */
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+.box2 {
+  /* align-self: end; */
+  grid-column: 3;
+  grid-row: 1/3;
+}
+.box3 {
+  /* justify-self: end; */
+  grid-column: 2/4;
+  grid-row: 3;
+  
+}
+.box4 {
+  /* overlap */
+  grid-column: 1;
+  grid-row: 2/4;
+  
+}
+.box4 {
+  
+}
+.box5 {
+  
+}
+.nested > div {
+  border: #333 1px solid;
+  padding: .3em;
+}
+
+.container > div, .container2 > div {
+  background: lightgray;
+  padding: 1em;
+}
+
+.container > div:nth-child(odd), .container2 > div:nth-child(odd) {
+  background: grey;
+}
