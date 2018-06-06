@@ -2,17 +2,15 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
+const App = () => (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="container_header">
+          <div className="logo">
+            <img src={logo} className="App-logo" alt="logo" />
+          </div>
+          <h1 className="App-title">CSS-GRID Examples</h1>
+        </div>
+        <div className="sub_title_1">SUB TITLE ONE</div>
         <section className="container">
           <div>Just a few words</div>
           <div>Just a few words</div>
@@ -31,6 +29,7 @@ class App extends Component {
           <div>Just a few words</div>
           <div>Just a few words</div>
         </section>
+        <div className="sub_title_2">SUB TITLE TWO</div>
         <section className="container2">
           <div className="box box1">Box 1</div>
           <div className="box box2">Box 2</div>
@@ -42,7 +41,5 @@ class App extends Component {
       </div>
 
     );
-  }
-}
 
 export default App;
